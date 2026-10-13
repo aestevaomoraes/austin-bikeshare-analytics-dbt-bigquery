@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: austin_bikeshare
+    database: bigquery-public-data
+    schema: austin_bikeshare
+    description: "Dados públicos do sistema de partilha de bicicletas de Austin (BigQuery Public Data)."
+    tables:
+      - name: bikeshare_trips
+        description: "Registo detalhado de cada viagem efetuada no sistema."
+      - name: bikeshare_stations
+        description: "Metadados e localização geográfica das estações de bicicletas."
