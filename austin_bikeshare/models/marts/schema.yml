@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: dim_stations
+    description: "Tabela dimensional das estações de Austin Bikeshare."
+    columns:
+      - name: station_id
+        description: "Chave primária da estação."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: total_docks
+        description: "Capacidade de docas da estação."
+        data_tests:
+          - not_null
+
+  - name: fct_trips
+    description: "Tabela fato consolidada das viagens de bicicleta."
+    columns:
+      - name: trip_id
+        description: "Chave primária da corrida."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: started_at
+        description: "Timestamp de partida."
+        data_tests:
+          - not_null
+
+      - name: duration_minutes
+        description: "Duração da corrida em minutos."
+        data_tests:
+          - not_null

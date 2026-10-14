@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_austin_bikeshare__trips
+    description: "Visão limpa e padronizada das corridas de bicicleta em Austin."
+    columns:
+      - name: trip_id
+        description: "Chave primária da viagem."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: started_at
+        description: "Timestamp de início da corrida."
+        data_tests:
+          - not_null
+
+  - name: stg_austin_bikeshare__stations
+    description: "Visão padronizada dos metadados das estações de bicicleta."
+    columns:
+      - name: station_id
+        description: "Chave primária da estação."
+        data_tests:
+          - unique
+          - not_null
+
+      - name: station_name
+        description: "Nome oficial da estação."
+        data_tests:
+          - not_null
